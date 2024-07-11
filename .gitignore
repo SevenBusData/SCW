@@ -1,0 +1,19 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+# Editor-based HTTP Client requests
+/httpRequests/
+# Datasource local storage ignored files
+/dataSources/
+/dataSources.local.xml
+/.idea/
+/SCW-COMMON/target/
+/SCW-ORDER/log/
+/SCW-ORDER/target/
+/SCW-PROJECT/log/
+/SCW-PROJECT/target/
+/SCW-REGISTER/target/
+/SCW-USER/target/
+/SCW-USER/log/
+/SCW-WEBUI/log/
+/SCW-WEBUI/target/

@@ -1,0 +1,48 @@
+server:
+  port: 8003
+spring:
+  application:
+    name: SCW-WEBUI
+  redis:
+    url: redis://localhost:6379
+  session:
+    store-type: redis
+    timeout: 1800
+  main:
+    allow-bean-definition-overriding: true
+  thymeleaf:
+    cache: false
+logging:
+  file:
+    path: ./scw-webui/log
+  level:
+    com:
+      xxx:
+        proj: debug
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+feign:
+  hystrix:
+    enabled: true
+  client:
+    config:
+      default:
+        connectTimeout: 5000
+        readTimeout: 1000
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 30000
+ribbon:
+  ReadTimeout: 30000
+  ConnectTimeout: 30000

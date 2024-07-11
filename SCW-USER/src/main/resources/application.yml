@@ -1,0 +1,36 @@
+spring:
+  redis:
+    url: redis://localhost:6379
+  datasource:
+    url: jdbc:mysql://rm-bp19suaxq33vgh759no.mysql.rds.aliyuncs.com:3306/scwdb?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT
+    username: seven
+    password: Zl220908
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+  application:
+    name: SCW-USER
+eureka:
+  client:
+    service-url:
+      default-zone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+sms:
+  host: http://dingxin.market.alicloudapi.com
+  path: /dx/sendSms
+  method: POST
+  appcode: aac65ed2099046149fdbbc155e65f56d
+logging:
+  file:
+    path: ./scw-user/log
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health
+server:
+  port: 8000
